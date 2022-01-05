@@ -8,7 +8,7 @@
     <style>
         table {
             width: 500px;
-            border: 1px solid greenyellow;
+            border: 1px solid rgb(59, 59, 59);
             margin: auto;
         }
         tr {
@@ -18,7 +18,7 @@
 </head>
 <body>
 <div>
-    <h2 align="center">Банковские транзакции</h2>
+    <h2 align="center">Tranzactii bancare</h2>
     <tr>
         <div align = "center">
             <div align = "center" >
@@ -26,20 +26,20 @@
 
                 <table class="table">
                     <tr>
-                        <th>Номер транзакции</th>
-                        <th>Имя аккаунта</th>
-                        <th>Транзакция</th>
-                        <th>Сумма транзакции</th>
+                        <th>Numarul tranzactiei</th>
+                        <th>NUmele contului</th>
+                        <th>Tranzactia</th>
+                        <th>Suma tranzactiei</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr  th:each="bank : ${listbank}">
-                        <td th:text="${bank.id}">Номер транзакции</td>
-                        <td th:text="${bank.accountName}">Имя аккаунта</td>
-                        <td th:text="${bank.transaction}">Транзакция</td>
-                        <td th:text="${bank.amount}">Сумма транзакции</td>
+                        <td th:text="${bank.id}">Numarul tranzactiei</td>
+                        <td th:text="${bank.accountName}">Numele contului</td>
+                        <td th:text="${bank.transaction}">Tranzactia</td>
+                        <td th:text="${bank.amount}">Suma tranzactiei</td>
                         <td>
-                            <a th:href="@{'/delete/' + ${bank.id}}">Удалить</a>
+                            <a th:href="@{'/delete/' + ${bank.id}}">Sterge</a>
                         </td>
                     </tr>
 
